@@ -1,6 +1,8 @@
-/*!****************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
-  \****************************************************************/
-body{
+body {
     background: lightblue;
 }
+img{
+    width: 500px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQuY3NzIiwibWFwcGluZ3MiOiJBQUFBO0lBQ0kscUJBQXFCO0FBQ3pCO0FBQ0E7SUFDSSxZQUFZO0FBQ2hCLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zZWNvbmQtcHJvamVjdC8uL3NyYy9tYWluLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICAgIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcclxufVxyXG5pbWd7XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

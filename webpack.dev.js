@@ -39,17 +39,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
             filename: 'index.html',
+            title: "Development"
         }),
         new MiniCssExtractPlugin({
             filename: 'build.css'
         }),
     ],
-    devServer: {
-        contentBase: path.join(__dirname, 'build'),
-        compress: true,
-        port: 9000,
-        open: true,
-    },
 };
