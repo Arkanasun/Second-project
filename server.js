@@ -1,14 +1,19 @@
-const Webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
-const webpackConfig = require('./webpack.dev.js');
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackConfig = require('./webpack.dev.js'); // Используем dev конфигурацию
 
-const compiler = Webpack(webpackConfig);
-const devServerOptions = { ...webpackConfig.devServer, open: true };
-const server = new WebpackDevServer(devServerOptions, compiler);
+const app = express();
+const compiler = webpack(webpackConfig);
 
-const runServer = async () => {
-    console.log('Starting server...');
-    await server.start();
-};
+// Используем webpack-dev-middleware
+app.use(
+    webpackDevMiddleware(compiler, {
+        publicPath: webpackConfig.output.publicPath,
+    })
+);
 
-runServer();
+// Сервер слушает на порту 3000
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!\n');
+});
